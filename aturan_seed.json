@@ -1,0 +1,134 @@
+{
+  "kawinPaksa": {
+    "OrangTua": {
+      "fakta": "Mempelai dipaksa menikah tanpa kerelaan, bahkan disertai ancaman.",
+      "sanksi": "Orang tua dikenakan adat 20 x KMB (Rp1.000.000)."
+    },
+    "Masyarakat": {
+      "fakta": "Adanya tekanan dari masyarakat terhadap pelaksanaan pernikahan.",
+      "sanksi": "Masyarakat dikenakan kesupan 1 x KK (Rp. 250.000)."
+    },
+    "Penghulu": {
+      "fakta": "Orang yang melangsungkan pernikahan tanpa persetujuan mempelai.",
+      "sanksi": "Yang mengawinkan dikenakan adat 4 x KK (Rp. 1.000.000)."
+    },
+    "KeduaMempelai": {
+      "fakta": "Salah satu atau kedua mempelai tidak menghendaki pernikahan.",
+      "sanksi": "Pernikahan dibatalkan, pasangan dipisahkan menurut adat."
+    }
+  },
+  "kawinDibawahUmur": {
+    "OrangTua": {
+      "fakta": "Salah satu atau kedua pasangan belum aqil baligh (<18 tahun).",
+      "sanksi": "Orang tua diadatkan 10 x KOT (Rp. 500.000)."
+    },
+    "Penghulu": {
+      "fakta": "Melangsungkan perkawinan anak di bawah umur.",
+      "sanksi": "Yang mengawinkan diadatkan 4 x KK (Rp. 1.000.000)."
+    },
+    "PasanganKorban": {
+      "fakta": "Salah satu pasangan belum cukup umur menurut adat Melayu.",
+      "sanksi": "Perkawinan dibatalkan oleh lembaga adat."
+    }
+  },
+  "kawinBerlainanAgama": {
+    "CalonMempelai": {
+      "fakta": "Calon suami istri berbeda agama.",
+      "sanksi": "Harus bermusyawarah untuk memilih satu agama yang dijalankan setelah menikah."
+    },
+    "SalahSatuPihak": {
+      "fakta": "Salah satu pasangan menolak pindah agama.",
+      "sanksi": "Diusahakan salah satu pihak meninggalkan agamanya."
+    },
+    "KeduaCalonMempelai": {
+      "fakta": "Keduanya tetap memegang agama masing-masing tanpa kesepakatan.",
+      "sanksi": "Islam tidak membolehkan perkawinan seperti ini menurut adat; perkawinan tidak boleh dilangsungkan."
+    }
+  },
+  "kawinSiri": {
+    "Pasangan": {
+      "fakta": "Pasangan melakukan pernikahan tanpa sepengetahuan keluarga dan tidak dicatat secara resmi.",
+      "sanksi": "Membayar adat kawin, kesupan kampung 1 x KK (Rp 250.000), mengurus surat nikah ke KUA."
+    },
+    "Perempuan": {
+      "fakta": "Perempuan menikah tanpa wali nasab yang sah, dilakukan secara diam-diam.",
+      "sanksi": "Adat kawin wajib dibayar pihak laki-laki, permintaan maaf dari pihak perempuan kepada keluarga."
+    },
+    "LakiLaki": {
+      "fakta": "Kawin siri tanpa restu keluarga sehingga menimbulkan konflik dan perpecahan keluarga.",
+      "sanksi": "Membayar adat kawin lengkap, kesupan kampung 2 x KK (Rp 500.000), musyawarah penyelesaian adat dengan keluarga."
+    }
+  },
+  "kawinLari": {
+    "LakiLaki": {
+      "fakta": "Laki-laki membawa lari gadis ke kampung lain dan dikawinkan tanpa izin orang tua.",
+      "sanksi": "Kesupan kampung 2 x KK (Rp 500.000), kesupan orang tua 10 x KUT (Rp 500.000)."
+    },
+    "LakiLaki_PengurusKampung": {
+      "fakta": "Pasangan dikawinkan oleh pengurus kampung tanpa izin wali.",
+      "sanksi": "Kesupan kampung 2 x KK (Rp 500.000), kesupan orang tua 10 x KUT (Rp 500.000), pengurus adat 20 x KUT (Rp 1.000.000)."
+    },
+    "LakiLaki_Perempuan": {
+      "fakta": "Orang tua menolak pernikahan tetapi tetap dinikahkan oleh pengurus kampung lain.",
+      "sanksi": "Kesupan kampung 2 x KK (Rp 500.000), kesupan orang tua 10 x KUT (Rp 500.000), pengurus adat 20 x KUT (Rp 1.000.000), musyawarah adat, denda tambahan."
+    }
+  },
+  "perzinahan": {
+    "BujangGadis": {
+      "fakta": "Zina bujang-gadis yang menyebabkan kehamilan.",
+      "sanksi": "Dinikahkan + kesupan 2 x KK (Rp 500.000) dan hukum zina."
+    },
+    "RamaiRamai": {
+      "fakta": "Perzinahan dilakukan ramai-ramai atau bergantian.",
+      "sanksi": "Adat 5 x KK (Rp 1.250.000), kesupan suami 10 x KOT (Rp 500.000), biaya ibu dan anak selama 3 tahun."
+    },
+    "Homoseksual": {
+      "fakta": "Hubungan sesama jenis (homoseksual).",
+      "sanksi": "Kesupan kampung 4 x KK (Rp 1.000.000), 1 ekor sapi, 40 gantang beras, jika anak-anak: 40 x KOT, diusir dari kampung."
+    },
+    "Sepurik": {
+      "fakta": "Zina saudara kandung (sepurik).",
+      "sanksi": "1 ekor sapi, 40 gantang beras, salah satu diusir dari kampung."
+    },
+    "Binatang": {
+      "fakta": "Melakukan hubungan seksual dengan binatang.",
+      "sanksi": "Kesupan kampung 6 x KK (Rp 1.500.000), 1 ekor sapi, 40 gantang beras, diusir dari kampung."
+    }
+  },
+  "muslimNonMuslim": {
+    "LakiLakiNonMuslim": {
+      "fakta": "Laki-laki non-muslim menzinahi perempuan muslim.",
+      "sanksi": "Kesupan kampung 10 x KK (Rp 2.500.000), kesupan orang tua 20 x KOT (Rp 1.000.000), adat zina 100 x KA (Rp 5.000.000)."
+    },
+    "PerempuanMuslim": {
+      "fakta": "Perempuan muslim bersetubuh di luar nikah dengan laki-laki non-muslim.",
+      "sanksi": "Sama seperti di atas, anak diasuh ibu, biaya anak 5 tahun ditanggung ayah."
+    }
+  },
+  "perceraian": {
+    "SuamiIstri_TanpaAnak": {
+      "fakta": "Tidak memiliki anak dalam pernikahan.",
+      "sanksi": "Harta bawaan milik masing-masing, harta bersama dibagi dua, kesupan kampung, kesupan suami/istri 20 x KMB (Rp 1.000.000)."
+    },
+    "SuamiIstri_DenganAnak": {
+      "fakta": "Memiliki anak dalam pernikahan.",
+      "sanksi": "Harta bawaan milik masing-masing, harta bersama dibagi 3 (suami, istri, anak), kesupan suami/istri 20 x KMB (Rp 1.000.000)."
+    },
+    "IbuAyah_Balita": {
+      "fakta": "Perceraian dengan anak balita/menyusu.",
+      "sanksi": "Anak ikut ibu, ayah wajib membantu biaya, jika perceraian karena ibu hak asuh bisa pindah ke ayah."
+    },
+    "AnakDewasa": {
+      "fakta": "Anak sudah bisa memilih orang tua yang diasuhnya.",
+      "sanksi": "Anak boleh memilih ikut ibu atau ayah."
+    },
+    "SuamiIstri_PihakKetiga": {
+      "fakta": "Perceraian karena pasangan mengambil pasangan orang lain.",
+      "sanksi": "Kesupan kampung 2 x KK (Rp 500.000), kesupan suami/istri 200 x KA (Rp 10.000.000), kesupan orang tua 2 x 10 x KOT (Rp 500.000), jika ada anak kesupan pemalu 10 x KOT (Rp 500.000), zina 50 x KA (Rp 500.000)."
+    },
+    "IstriMengajukan": {
+      "fakta": "Istri yang mengajukan perceraian.",
+      "sanksi": "Harta bawaan milik masing-masing, harta bersama dibagi 1/3 anak dan 2/3 orang tua; ibu mendapat 1/3 dari 2/3, jika ia yang menceraikan."
+    }
+  }
+}
