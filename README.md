@@ -1,0 +1,2 @@
+# sistempakar
+tugas kuliah
