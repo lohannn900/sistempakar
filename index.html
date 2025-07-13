@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistem Pakar Hukum Adat Melayu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Sistem Pakar Hukum Adat Perkawinan Melayu</h1>
+    <a href="{{ url_for('logout') }}" style="float: right; margin-top: -30px;">🔒 Logout</a>
+
+    <form id="formMasalah">
+      <label for="kategori">Kategori Masalah:</label>
+      <select id="kategori" required>
+        <option value="">-- pilih kategori --</option>
+        {% for key in aturan.keys() %}
+          <option value="{{ key }}">{{ key | replace('kawin', 'Kawin ') | replace('muslim', 'Muslim ') | replace('non', 'Non-') | replace('perceraian', 'Perceraian') | title }}</option>
+        {% endfor %}
+      </select>
+
+      <div id="pelakuBox"></div>
+
+      <button type="submit">Cek Aturan</button>
+    </form>
+
+    <div id="hasil"></div>
+  </div>
+
+  <!-- Inject data aturan dari backend ke JS -->
+  <script id="data-aturan" type="application/json">
+    {{ aturan | tojson }}
+  </script>
+
+  <script>
+    const data = JSON.parse(document.getElementById("data-aturan").textContent);
+    const kategoriSelect = document.getElementById("kategori");
+    const pelakuBox = document.getElementById("pelakuBox");
+    const hasilDiv = document.getElementById("hasil");
+
+    kategoriSelect.addEventListener("change", function () {
+      const kategori = kategoriSelect.value;
+      pelakuBox.innerHTML = "";
+      hasilDiv.innerHTML = "";
+
+      if (kategori && data[kategori]) {
+        const keys = Object.keys(data[kategori]);
+        const options = keys
+          .map(p => `<option value="${p}">${p.replace(/([A-Z])/g, " $1").trim()}</option>`)
+          .join("");
+        pelakuBox.innerHTML = `
+          <label for="pelaku">Pelaku:</label>
+          <select id="pelaku" required>
+            <option value="">-- pilih pelaku --</option>
+            ${options}
+          </select>
+        `;
+      }
+    });
+
+    document.getElementById("formMasalah").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const kategori = kategoriSelect.value;
+      const pelaku = document.getElementById("pelaku")?.value;
+
+      if (!kategori || !pelaku) {
+        hasilDiv.innerHTML = "<p class='error'>Lengkapi pilihan kategori dan pelaku!</p>";
+        return;
+      }
+
+      fetch("/cek_aturan", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ kategori, pelaku }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          hasilDiv.innerHTML = "<p class='error'>Aturan tidak ditemukan.</p>";
+        } else {
+          hasilDiv.innerHTML = `
+            <h3>Hasil Aturan Adat</h3>
+            <p><strong>Fakta / Kondisi:</strong> ${data.fakta}</p>
+            <p><strong>Sanksi:</strong> ${data.sanksi}</p>
+          `;
+        }
+      })
+      .catch((err) => {
+        hasilDiv.innerHTML = "Terjadi kesalahan.";
+        console.error(err);
+      });
+    });
+  </script>
+</body>
+</html>

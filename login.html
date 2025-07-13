@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="error">
+          {% for msg in messages %}
+            <li>{{ msg }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('login') }}">
+      <label for="username">Username:</label>
+      <input type="text" name="username" required />
+      
+      <label for="password">Password:</label>
+      <input type="password" name="password" required />
+      
+      <button type="submit">Login</button>
+    </form>
+    <p>Belum punya akun? <a href="{{ url_for('register') }}">Daftar di sini</a></p>
+  </div>
+</body>
+</html>
